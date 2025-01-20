@@ -1,0 +1,142 @@
+body {
+    /* display: flex; */
+    padding-top: 10px;
+    flex-direction: row;
+    align-items: center;
+    /* gap: 50px; */
+    background: #fff;
+}
+
+header {
+    display: flex;
+    /* width: 100%; */
+    padding: 10px 50px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    display: flex;
+    float: left;
+    color: #000;
+    font-family: "Playfair Display";
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+header div.menu {
+    display: flex;
+    float: right;
+    padding: var(--sds-size-space-0);
+    align-items: center;
+    gap: 45px;
+    text-align: center;
+}
+
+header a {
+    font-family: "Playfair Display";
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    color: #c4c4c4;
+    text-decoration: none;
+}
+
+header a.menu-active {
+    color: #000;
+    text-decoration-line: underline;
+}
+
+header a:hover {
+    text-decoration: underline;
+}
+
+div.main-section {
+    display: flex;
+    padding: 50px;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: column;
+}
+
+div.hero-section {
+    display: flex;
+    padding: var(--sds-size-space-0);
+    justify-content: space-between;
+    align-items: center;
+    /* max-width: 1200px; */
+}
+
+div.photo {
+    /* display: flex; */
+    /* max-width: 450px; */
+    /* height: 700px; */
+    width: 557px;
+    padding: var(--sds-size-space-0);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--sds-size-space-0);
+    flex-shrink: 0;
+    align-self: stretch;
+    border-radius: 12px;
+    border: 1px solid #000;
+    background: url("/photo.jpeg") lightgray -257.05px 0px / 215.658% 100% no-repeat;
+}
+
+div.description {
+    /* display: flex; */
+    padding: 50px;
+    margin: 0px 20px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    border: 1px solid #000;
+    max-width: 450px;
+    height: 700px;
+    /* min-height: 450px; */
+    /* max-height: 700px; */
+    position: relative;
+}
+
+div.description h1 {
+    display: flex;
+    padding: 10px var(--sds-size-space-0) 10px 10px;
+    align-items: center;
+    gap: 10px;
+    color: #000;
+    font-family: "Playfair Display";
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+div.description h2 {
+    display: flex;
+    padding: 10px var(--sds-size-space-0) 10px 10px;
+    align-items: center;
+    gap: 10px;
+    color: #261515;
+    font-family: "Playfair Display";
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+div.contact {
+    display: flex;
+    width: 345px;
+    padding: var(--sds-size-space-0);
+    justify-content: center;
+    align-items: center;
+    gap: 23px;
+    bottom: 0;
+    position: absolute;
+    padding: 10px 15px;
+}
