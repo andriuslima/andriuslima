@@ -1,0 +1,49 @@
+---
+import Navigation from "../components/navigation.astro";
+import Footer from "../components/footer.astro";
+---
+
+<html lang="en">
+    <head>
+        <title>Andrius Lima</title>
+        <meta charset="utf-8" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="viewport" content="width=device-width" />
+        <meta name="generator" content={Astro.generator} >
+    </head>
+
+    <body>
+
+    <style>
+        body {
+            position: relative;
+            min-height: 100vh;
+            padding-top: 10px;
+            margin: 0;
+            background: #fff;
+        }
+    </style>
+
+    <Navigation menus={
+        [
+            {
+                name: 'Home',
+                url: '/',
+            },
+            {
+                name: 'About',
+                url: '/about',
+            },
+            {
+                name: 'Works',
+                url: '/works',
+            }
+        ]
+    }/>
+
+    <slot />
+
+    <Footer email="hello@andriuslima.com" />
+
+    </body>
+</html>

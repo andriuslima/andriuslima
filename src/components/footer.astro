@@ -1,0 +1,57 @@
+---
+interface Props{
+    email: string
+}
+const { email } = Astro.props
+
+const currentYear = new Date().getFullYear();
+const mailto: string = `mailto:${email}`
+---
+
+<style>
+    footer {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        background: black;
+        height: 100px;
+        margin: 0;
+        padding: 0;
+    }
+
+    a {
+        text-decoration: none;
+        font-style: italic;
+        color: #aeaeae;
+    }
+
+    h1 {
+        padding-top: 10px;
+        text-align: center;
+        color: white;
+        font-family: "Playfair Display", serif;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: lighter;
+        line-height: normal;
+    }
+
+    h6 {
+        position: absolute;
+        bottom: 10px;
+        width: 100%;
+        margin: 5px;
+        text-align: center;
+        color: grey;
+        font-family: "Playfair Display", serif;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: lighter;
+        line-height: normal;
+    }
+</style>
+
+<footer>
+    <h1>Want to work together? Send a message to <a href={mailto}>{email}</a></h1>
+    <h6>Designed and developed by Andrius Lima - {currentYear} &copy;</h6>
+</footer>
