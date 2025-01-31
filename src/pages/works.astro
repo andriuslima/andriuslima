@@ -1,18 +1,37 @@
 ---
 import Page from "../layouts/page.astro";
 import Section from "../components/section.astro";
+import Navigation from "../components/navigation.astro";
+
+const duration = (from: Date, to: Date) => {
+    let years = to.getFullYear() - from.getFullYear();
+    let months = to.getMonth() - from.getMonth();
+
+    if (months < 0) {
+        years--;
+        months += 12;
+    }
+
+    if (years == 0) {
+        return `${months} months`;
+    }
+
+    if (months == 0) {
+        return `${years} years`;
+    }
+
+    return `${years} years and ${months} months`;
+}
+
 ---
 
 <style>
     .card {
-        width: 400px;
-        min-width: 350px;
-        height: 600px;
-        min-height: 550px;
+        width: 500px;
+        min-width: 400px;
         padding: 50px;
         margin: 20px;
         border-radius: 12px;
-        //border: 1px solid #000;
         box-shadow: 1px 2px 10px 2px #b1b1b1;
     }
 
@@ -40,38 +59,65 @@ import Section from "../components/section.astro";
         font-size: 16px;
         font-style: normal;
         font-weight: 400;
-        line-height: 30px
+        line-height: 30px;
+        //margin: 0;
     }
 </style>
+
+<Navigation active="Works"/>
 
 <Page>
     <Section>
         <div class="card">
-            <h1> Company 01 </h1>
-            <h2> 12/12/1970 - 12/12/1970 </h2>
+            <h1> HOAM Ventures </h1>
+            <h2> July 2022 - Present ({duration(new Date(2022, 7), new Date())}) </h2>
             <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In non dui libero. Vivamus pellentesque tempus dui quis interdum. In egestas, tortor sed congue suscipit, quam arcu eleifend purus, non placerat nulla purus interdum quam. In commodo eros id dignissim ultrices. In non ultrices urna. Quisque turpis justo, porttitor sed risus ac, suscipit venenatis arcu. Ut congue, est gravida consequat fermentum, odio magna imperdiet enim, sit amet ullamcorper dui tellus quis purus. Nam ut felis erat. Sed hendrerit nibh vel mi vestibulum molestie consectetur nec erat. Fusce convallis posuere condimentum. Aenean congue elementum risus. Nunc faucibus ligula nec sem laoreet, id sollicitudin sem scelerisque. Vivamus a nibh sed diam gravida tristique quis et dolor. Curabitur vehicula sollicitudin lectus a aliquam. Nunc faucibus odio elit, vel dapibus lacus sollicitudin vel.
+                <strong>Position</strong>: Engineer Manager.
+            </p>
+            <p>
+                <strong>Highlights</strong>: Scrum methodology, Continuous Integration and Continuous Delivery.
+            </p>
+            <p>
+                As an Engineering Manager at Community Archives since 2022, I have been leading a diverse team of software developers in delivering high-quality, innovative solutions that meet our clients' needs. My role involves overseeing all aspects of the software development lifecycle, from initial planning and requirements gathering to development, testing, and deployment. I work closely with cross-functional teams, including product management and design, to ensure that projects are delivered on time and within scope. In addition, I am also focused on team development and growth. I mentor and coach team members, helping them set and achieve professional goals, and providing regular feedback to support their career progression. I am committed to creating a collaborative and inclusive work environment where everyone feels empowered to contribute their best ideas.
             </p>
         </div>
         <div class="card">
-            <h1> Company 02 </h1>
-            <h2> 12/12/1970 - 12/12/1970 </h2>
+            <h1> TownSq </h1>
+            <h2> July 2019 - July 2022 ({duration(new Date(2019, 7), new Date(2022, 7))}) </h2>
             <p>
-                Donec imperdiet molestie risus, ac faucibus sem laoreet at. Proin lacinia venenatis metus id mollis. Etiam fringilla maximus arcu. Vivamus eu tincidunt mi. Pellentesque egestas dolor sit amet lacus dictum, ullamcorper luctus ante feugiat. Quisque quis justo in tellus tincidunt accumsan. Pellentesque a tincidunt dolor. Mauris pulvinar, velit quis fermentum posuere, metus diam congue elit, a lobortis turpis felis vitae lectus. Praesent interdum eget erat in pharetra. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nunc mi metus, aliquam ut sodales sed, viverra sit amet magna. Pellentesque fringilla sapien felis, sed efficitur nunc imperdiet vitae.
+                <strong>Position</strong>: Back-end Developer.
+            </p>
+            <p>
+                <strong>Highlights</strong>: Java, Sprint Boot, Spring Framework, AWS (Lambdas, SQS, SNS, SES, and ElasticbeanStalk, Firebase).
+            </p>
+            <p>
+                During my time as a Back-end developer at TownSq, I specialized in designing, developing, and maintaining scalable microservices applications. My role involved writing clean, efficient, and well-documented code, primarily in languages such as Java and Node.js (Typescript). I collaborated closely with front-end developers, product managers, and other stakeholders to understand requirements and translate them into software solutions. I was responsible for managing databases, optimizing queries, and ensuring data integrity, working with NoSQL databases (MongoDB). My work also included implementing authentication and authorization mechanisms, integrating third-party services/vendors, and deploying applications to cloud environments on AWS.
             </p>
         </div>
         <div class="card">
-            <h1> Company 04 </h1>
-            <h2> 12/12/1970 - 12/12/1970 </h2>
+            <h1> Neogrid </h1>
+            <h2> January 2019 - July 2019 ({duration(new Date(2019, 1), new Date(2019, 7))}) </h2>
             <p>
-                Donec in convallis est, et placerat risus. Aenean erat risus, ornare vitae massa vitae, cursus viverra metus. Nulla nec sem nisl. Aenean nec faucibus massa, et feugiat orci. Interdum et malesuada fames ac ante ipsum primis in faucibus. Maecenas a felis vel nibh ornare sollicitudin. Donec laoreet tincidunt felis. Maecenas tellus erat, vulputate sed tempus eget, ultricies vitae odio. Sed elit metus, aliquam non leo non, auctor venenatis dolor. Nunc et viverra leo, in auctor mauris.
+                <strong>Position</strong>: Back-end Developer.
+            </p>
+            <p>
+                <strong>Highlights</strong>: Java EE (Oracle Weblogic servers, EJB, JSF, JPA and JBoss).
+            </p>
+            <p>
+                As a java Back-end developer, I worked on Neogrid software architecture. Developing Java applications using Java EE deployed with Oracle Weblogic Servers.
             </p>
         </div>
         <div class="card">
-            <h1> Company 03 </h1>
-            <h2> 12/12/1970 - 12/12/1970 </h2>
+            <h1> Neogrid </h1>
+            <h2> December 2016 - December 2018 ({duration(new Date(2016, 12), new Date(2018, 12))})</h2>
             <p>
-                Donec dolor nunc, tempor in ex a, egestas fringilla purus. Nulla varius sapien id libero vestibulum ullamcorper. Curabitur ut interdum neque. Praesent efficitur tellus sit amet ullamcorper blandit. Curabitur sed commodo enim, at sagittis sem. Nam eu enim pretium, bibendum felis ac, scelerisque est. Aliquam id ex at elit convallis scelerisque. Aliquam fermentum at felis a ornare. Vivamus sit amet dapibus eros. Phasellus ut quam euismod, accumsan risus sit amet, pretium odio. Ut semper blandit aliquam. Duis at euismod nisl, et accumsan augue. Morbi cursus sapien eget nibh malesuada, ut finibus mi mattis. Aenean consectetur lorem risus. Morbi consectetur, urna tristique laoreet euismod, dolor justo euismod mauris, a sodales mi felis ut elit. Etiam eu tortor mattis, elementum dui vel, euismod est.
+                <strong>Position</strong>: Intern.
+            </p>
+            <p>
+                <strong>Highlights</strong>: Linux management, Virtualization with VMWare.
+            </p>
+            <p>
+                During my internship I helped the Infrasturcure team at Neogrid to maintain and modernize the infrastructure architecture. With VMWare we managed our cluster providing Virtual Machines where the development team could run the application.
             </p>
         </div>
     </Section>

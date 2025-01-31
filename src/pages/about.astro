@@ -1,6 +1,7 @@
 ---
 import Page from "../layouts/page.astro";
 import Section from "../components/section.astro";
+import Navigation from "../components/navigation.astro";
 ---
 
 <style>
@@ -8,6 +9,7 @@ import Section from "../components/section.astro";
         padding: 50px;
         margin: 20px;
         position: relative;
+        max-width: 1000px;
     }
 
     .card h1 {
@@ -17,40 +19,93 @@ import Section from "../components/section.astro";
         font-style: normal;
         font-weight: 500;
         line-height: normal;
+        margin-bottom: 15px;
     }
 
     .card h2 {
-        color: #261515;
+        color: #000;
         font-family: "Playfair Display", serif;
         font-size: 30px;
         font-style: normal;
         font-weight: 400;
         line-height: normal;
+        margin-top: 30px;
+        margin-bottom: 10px
     }
 
     .card p {
-        color: #261515;
+        color: #000;
         font-family: "Playfair Display", serif;
         font-size: 20px;
         font-style: normal;
         font-weight: 400;
         line-height: normal;
     }
+
+    a {
+        text-decoration: underline;
+        color: #000;
+    }
+
+    ul {
+        padding-inline-start: 15px;
+        margin-block-start: 10px;
+        list-style-type: circle;
+    }
+
+    li {
+        font-family: "Playfair Display", serif;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
 </style>
+
+<Navigation active="About"/>
 
 <Page>
     <Section>
         <div class="card">
             <h1>
-                Lorem ipsum dolor sit amet
+                A little bit about myself.
             </h1>
-            <h2>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In non dui libero. Vivamus pellentesque tempus dui quis interdum. In egestas, tortor sed congue suscipit, quam arcu eleifend purus, non placerat nulla purus interdum quam. In commodo eros id dignissim ultrices. In non ultrices urna. Quisque turpis justo, porttitor sed risus ac, suscipit venenatis arcu. Ut congue, est gravida consequat fermentum, odio magna imperdiet enim, sit amet ullamcorper dui tellus quis purus. Nam ut felis erat. Sed hendrerit nibh vel mi vestibulum molestie consectetur nec erat. Fusce convallis posuere condimentum. Aenean congue elementum risus. Nunc faucibus ligula nec sem laoreet, id sollicitudin sem scelerisque. Vivamus a nibh sed diam gravida tristique quis et dolor. Curabitur vehicula sollicitudin lectus a aliquam. Nunc faucibus odio elit, vel dapibus lacus sollicitudin vel.
-            </h2>
+            <p>
+                As a Engineer Manager (which on a Scrum perspective you can think of it as a Scrum Master role) my goal
+                is to create a environment where people feel good to work on. It is one of my principles that feeling
+                good about your work - and your work environment - is the base for creating a high performant team.
+            </p>
+            <p>
+                However, creating - or changing - the team culture might take some time. That are a lot of things you
+                need to iron out. I rely on the work of <a href="https://calnewport.com/" target="_blank">Cal
+                Newport</a> and <a href="https://www.scrum.org/" target="_blank">Scrum</a> methodology to create a high
+                performant team whose team members enjoy working on.
+            </p>
 
             <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In non dui libero. Vivamus pellentesque tempus dui quis interdum. In egestas, tortor sed congue suscipit, quam arcu eleifend purus, non placerat nulla purus interdum quam. In commodo eros id dignissim ultrices. In non ultrices urna. Quisque turpis justo, porttitor sed risus ac, suscipit venenatis arcu. Ut congue, est gravida consequat fermentum, odio magna imperdiet enim, sit amet ullamcorper dui tellus quis purus. Nam ut felis erat. Sed hendrerit nibh vel mi vestibulum molestie consectetur nec erat. Fusce convallis posuere condimentum. Aenean congue elementum risus. Nunc faucibus ligula nec sem laoreet, id sollicitudin sem scelerisque. Vivamus a nibh sed diam gravida tristique quis et dolor. Curabitur vehicula sollicitudin lectus a aliquam. Nunc faucibus odio elit, vel dapibus lacus sollicitudin vel.
+                You can check the footer for contact information. Also, checkout my <a href="http://github.com/andriuslima" target="_blank">GitHub</a> profile
             </p>
+
+            <h2>
+                Methodologies.
+            </h2>
+            <ul>
+                <li>Cal Newport</li>
+                <li>Scrum</li>
+                <li>David Marquet</li>
+            </ul>
+
+            <h2>
+                Programming languages, frameworks &amp; tools.
+            </h2>
+            <ul>
+                <li>Java</li>
+                <li>JavaScript and TypeScript</li>
+                <li>C#</li>
+                <li>AWS (my favorites services are: Lambda, S3, SQS, SNS and EventBridge)</li>
+                <li>Python</li>
+            </ul>
         </div>
     </Section>
 </Page>

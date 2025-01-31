@@ -1,7 +1,18 @@
  ---
 import Section from "../components/section.astro";
 import Page from "../layouts/page.astro";
+import Navigation from "../components/navigation.astro";
 
+const hours = new Date().getHours();
+let timeOfDay;
+
+if (hours >= 5 && hours < 12) {
+    timeOfDay = "morning";
+} else if (hours >= 12 && hours < 18) {
+    timeOfDay = "afternoon";
+} else {
+    timeOfDay = "night";
+}
 
 const profilePhoto = `url("/photo.jpeg");`
 
@@ -31,7 +42,7 @@ const profilePhoto = `url("/photo.jpeg");`
      .card h2 {
          color: #261515;
          font-family: "Playfair Display", serif;
-         font-size: 30px;
+         font-size: 20px;
          font-style: normal;
          font-weight: 400;
          line-height: normal;
@@ -41,9 +52,14 @@ const profilePhoto = `url("/photo.jpeg");`
          color: #261515;
          font-family: "Playfair Display", serif;
          font-size: 20px;
-         font-style: normal;
+         font-style: italic;
          font-weight: 400;
          line-height: normal;
+     }
+
+     a {
+         text-decoration: underline;
+         color: #000;
      }
 
      .profile-photo {
@@ -52,13 +68,15 @@ const profilePhoto = `url("/photo.jpeg");`
 
  </style>
 
+ <Navigation active="Home"/>
+
  <Page>
      <Section>
          <div class="card profile-photo"></div>
          <div class="card">
-             <h1>Hey, I'm Andrius Lima.</h1>
-             <h2>A software engineer manager working at Community Archives.</h2>
-             <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ligula nulla, varius in sem id. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ligula nulla, varius in sem id</h3>
+             <h1>Andrius Lima.</h1>
+             <h2>Good {timeOfDay}, this is my personal website. Here you will information about me and my work</h2>
+             <h3>I am currently working as a Software Engineer Manager at <a href="https://communityarchives.com" target="_blank">Community Archives</a>.</h3>
          </div>
      </Section>
  </Page>

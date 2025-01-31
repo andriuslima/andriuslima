@@ -1,15 +1,28 @@
 ---
 interface Props {
-    menus: Menu[]
+    active?: string;
 }
 
-interface Menu {
-    name: string,
-    url: string
+let { active } = Astro.props;
+
+if (!active) {
+   active = "Home"
 }
 
-const { menus } = Astro.props
-const currentUrl = Astro.url.pathname
+const menus = [
+    {
+        name: "Home",
+        url: "/"
+    },
+    {
+        name: "About",
+        url: "/about"
+    },
+    {
+        name: "Works",
+        url: "/works"
+    }
+];
 ---
 
 <style>
@@ -64,10 +77,10 @@ const currentUrl = Astro.url.pathname
     <div class="menu">
         {
             menus.map((menu) => {
-                if (menu.url == currentUrl) {
-                    return <a class='active' href={menu.url}>{menu.name}</a>
+                if (menu.name.toLowerCase() == active.toLowerCase()) {
+                    return <a class="active" href={menu.url}>{menu.name}</a>;
                 } else {
-                    return <a href={menu.url}>{menu.name}</a>
+                    return <a href={menu.url}>{menu.name}</a>;
                 }
 
             })
