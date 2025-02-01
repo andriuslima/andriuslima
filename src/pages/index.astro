@@ -14,68 +14,16 @@ if (hours >= 5 && hours < 12) {
     timeOfDay = "night";
 }
 
-const profilePhoto = `url("/photo.jpeg");`
-
  ---
- <style define:vars={{ profilePhoto }}>
-     .card {
-         width: 500px;
-         min-width: 500px;
-         height: 700px;
-         padding: 50px;
-         margin: 20px;
-         border-radius: 12px;
-         //border: 1px solid #000;
-         position: relative;
-         box-shadow: 1px 2px 10px 2px #b1b1b1;
-     }
-
-     .card h1 {
-         color: #000;
-         font-family: "Playfair Display", serif;
-         font-size: 40px;
-         font-style: normal;
-         font-weight: 500;
-         line-height: normal;
-     }
-
-     .card h2 {
-         color: #261515;
-         font-family: "Playfair Display", serif;
-         font-size: 20px;
-         font-style: normal;
-         font-weight: 400;
-         line-height: normal;
-     }
-
-     .card h3 {
-         color: #261515;
-         font-family: "Playfair Display", serif;
-         font-size: 20px;
-         font-style: italic;
-         font-weight: 400;
-         line-height: normal;
-     }
-
-     a {
-         text-decoration: underline;
-         color: #000;
-     }
-
-     .profile-photo {
-         background: var(--profilePhoto) lightgray -257.05px 0 / 215.658% 100% no-repeat;
-     }
-
- </style>
 
  <Navigation active="Home"/>
 
  <Page>
      <Section>
-         <div class="card profile-photo"></div>
-         <div class="card">
+         <div class="card-fixed profile-photo"></div>
+         <div class="card-fixed">
              <h1>Andrius Lima.</h1>
-             <h2>Good {timeOfDay}, this is my personal website. Here you will information about me and my work</h2>
+             <h3>Good {timeOfDay}, this is my personal website. Here you will information about me and my work</h3>
              <h3>I am currently working as a Software Engineer Manager at <a href="https://communityarchives.com" target="_blank">Community Archives</a>.</h3>
          </div>
      </Section>

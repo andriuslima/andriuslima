@@ -25,62 +25,15 @@ const menus = [
 ];
 ---
 
-<style>
-    header {
-        display: flex;
-        padding: 10px 50px;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    header h1 {
-        display: flex;
-        float: left;
-        color: #000;
-        font-family: "Playfair Display", serif;
-        font-size: 25px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: normal;
-    }
-
-    header a {
-        font-family: "Playfair Display", serif;
-        font-size: 25px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: normal;
-        color: #c4c4c4;
-        text-decoration: none;
-    }
-
-    header a:hover {
-        text-decoration: underline;
-    }
-
-    header a.active {
-        color: #000;
-        text-decoration-line: underline;
-    }
-
-    .menu {
-        display: flex;
-        float: right;
-        align-items: center;
-        gap: 45px;
-        text-align: center;
-    }
-</style>
-
 <header>
-    <h1>Andrius Lima.</h1>
+    <h3>Andrius Lima.</h3>
     <div class="menu">
         {
             menus.map((menu) => {
                 if (menu.name.toLowerCase() == active.toLowerCase()) {
-                    return <a class="active" href={menu.url}>{menu.name}</a>;
+                    return <h3><a class="active" href={menu.url}>{menu.name}</a></h3>;
                 } else {
-                    return <a href={menu.url}>{menu.name}</a>;
+                    return <h3><a href={menu.url}>{menu.name}</a></h3>;
                 }
 
             })

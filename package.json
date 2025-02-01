@@ -8,7 +8,8 @@
         "dev": "astro dev",
         "build": "astro check && astro build",
         "preview": "astro preview",
-        "astro": "astro"
+        "astro": "astro",
+        "wrangler": "wrangler"
     },
     "dependencies": {
         "@astrojs/check": "0.9.3",
@@ -16,6 +17,7 @@
         "typescript": "5.5.4"
     },
     "devDependencies": {
-        "prettier": "3.3.3"
+        "prettier": "3.3.3",
+        "wrangler": "3.107.2"
     }
 }

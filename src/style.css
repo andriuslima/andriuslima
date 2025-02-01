@@ -1,0 +1,118 @@
+body {
+    position: relative;
+    min-height: 100vh;
+    padding-top: 10px;
+    margin: 0;
+    background: #fff;
+    color: #000;
+    font-family: "Playfair Display", serif;
+    font-style: normal;
+    line-height: 1.8;
+}
+
+h1 {
+    font-weight: 400;
+    font-size: 40px;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+h2 {
+    font-weight: 400;
+    font-size: 30px;
+}
+
+h3 {
+    font-weight: 400;
+    font-size: 20px;
+}
+
+p {
+    font-weight: 400;
+    font-size: 18px;
+}
+
+a {
+    font-weight: 400;
+    text-decoration: underline;
+    color: #000;
+}
+
+header a {
+    color: #c4c4c4;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+ul {
+    padding-inline-start: 15px;
+    margin-block-start: 10px;
+    list-style-type: circle;
+}
+
+li {
+    font-size: 18px;
+}
+
+header {
+    display: flex;
+    padding: 10px 50px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.menu {
+    display: flex;
+    float: right;
+    align-items: center;
+    gap: 45px;
+    text-align: center;
+}
+
+.card-fixed {
+    width: 500px;
+    min-width: 500px;
+    height: 700px;
+    padding: 50px;
+    margin: 20px;
+    border-radius: 12px;
+    position: relative;
+    box-shadow: 1px 2px 10px 2px #b1b1b1;
+}
+
+.card-dynamic {
+    width: 500px;
+    min-width: 400px;
+    padding: 20px 50px;
+    margin: 20px;
+    border-radius: 12px;
+    box-shadow: 1px 2px 10px 2px #b1b1b1;
+}
+
+.section-text {
+    padding: 50px;
+    margin: 20px;
+    position: relative;
+    max-width: 1000px;
+}
+
+.profile-photo {
+    background-image: url("/photo.jpeg");
+    background-size: 215.658% 100%;
+    background-repeat: no-repeat;
+    background-position: -257.05px 0;
+    background-color: lightgray;
+}
+
+.card-dynamic h1 {
+    font-style: italic;
+}
+
+.active {
+    color: unset;
+    text-decoration-line: underline;
+}
