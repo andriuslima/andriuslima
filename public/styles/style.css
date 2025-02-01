@@ -13,23 +13,46 @@ body {
 h1 {
     font-weight: 400;
     font-size: 40px;
-    margin-bottom: 0;
     margin-top: 0;
+    margin-bottom: 0;
+}
+
+footer h1 {
+    font-size: 18px;
+    color: white;
+    padding-top: 10px;
+    text-align: center;
 }
 
 h2 {
     font-weight: 400;
     font-size: 30px;
+    margin-top: 25px;
+    margin-bottom: 0;
 }
 
 h3 {
     font-weight: 400;
     font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
+h6 {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    margin: 5px;
+    text-align: center;
+    color: grey;
+    font-size: 12px;
+    font-weight: lighter;
 }
 
 p {
     font-weight: 400;
     font-size: 18px;
+    margin: 10px 0;
 }
 
 a {
@@ -41,6 +64,12 @@ a {
 header a {
     color: #c4c4c4;
     text-decoration: none;
+}
+
+footer a {
+    text-decoration: none;
+    font-style: italic;
+    color: #aeaeae;
 }
 
 a:hover {
@@ -64,6 +93,15 @@ header {
     align-items: center;
 }
 
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: black;
+    height: 100px;
+    margin: 0;
+    padding: 0;
+}
 
 .menu {
     display: flex;
