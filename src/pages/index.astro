@@ -2,6 +2,8 @@
 import Section from "../components/section.astro";
 import Page from "../layouts/page.astro";
 import Navigation from "../components/navigation.astro";
+import CardFixed from "../components/card-fixed.astro";
+import CardPhoto from "../components/card-photo.astro";
 
 const hours = new Date().getHours();
 let timeOfDay;
@@ -20,12 +22,12 @@ if (hours >= 5 && hours < 12) {
 
  <Page>
      <Section>
-         <div class="card-fixed profile-photo"></div>
-         <div class="card-fixed">
+         <CardPhoto />
+         <CardFixed>
              <h1>Andrius Lima.</h1>
-             <h3>Good {timeOfDay}, this is my personal website. Here you will information about me and my work</h3>
-             <h3>I am currently working as a Software Engineer Manager at <a href="https://communityarchives.com" target="_blank">Community Archives</a>.</h3>
-         </div>
+             <h4>Good {timeOfDay}, this is my personal website. Here you will information about me and my work</h4>
+             <h4>I am currently working as a Software Engineer Manager at <a href="https://communityarchives.com" target="_blank">Community Archives</a>.</h4>
+         </CardFixed>
      </Section>
  </Page>
 
