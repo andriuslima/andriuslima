@@ -25,54 +25,53 @@ import { ClientRouter } from "astro:transitions";
     </head>
 
     <body>
+        <script>
+            let copyButtonLabel = "Copy";
+            let codeBlocks = Array.from(document.querySelectorAll("pre"));
 
-    <script>
-        let copyButtonLabel = "Copy";
-        let codeBlocks = Array.from(document.querySelectorAll("pre"));
+            for (let codeBlock of codeBlocks) {
+                let wrapper = document.createElement("div");
+                wrapper.style.position = "relative";
 
-        for (let codeBlock of codeBlocks) {
-            let wrapper = document.createElement("div");
-            wrapper.style.position = "relative";
+                let copyButton = document.createElement("button");
+                copyButton.className = "copy-code";
+                copyButton.innerHTML = copyButtonLabel;
 
-            let copyButton = document.createElement("button");
-            copyButton.className = "copy-code";
-            copyButton.innerHTML = copyButtonLabel;
+                codeBlock.setAttribute("tabindex", "0");
+                codeBlock.appendChild(copyButton);
+                codeBlock?.parentNode?.insertBefore(wrapper, codeBlock);
+                wrapper.appendChild(codeBlock);
 
-            codeBlock.setAttribute("tabindex", "0");
-            codeBlock.appendChild(copyButton);
-            codeBlock?.parentNode?.insertBefore(wrapper, codeBlock);
-            wrapper.appendChild(codeBlock);
-
-            copyButton.addEventListener("click", async () => {
-                await copyCode(codeBlock, copyButton);
-            });
-        }
-
-        async function copyCode(block: HTMLPreElement, button: HTMLButtonElement) {
-            let code = block.querySelector("code");
-            if (!code) {
-                console.error("Could not copy");
-                return;
+                copyButton.addEventListener("click", async () => {
+                    await copyCode(codeBlock, copyButton);
+                });
             }
 
-            let text = code.innerText;
+            async function copyCode(block: HTMLPreElement, button: HTMLButtonElement) {
+                let code = block.querySelector("code");
+                if (!code) {
+                    console.error("Could not copy");
+                    return;
+                }
 
-            await navigator.clipboard.writeText(text);
+                let text = code.innerText;
 
-            button.innerText = "Copied";
+                await navigator.clipboard.writeText(text);
 
-            setTimeout(() => {
-                button.innerText = copyButtonLabel;
-            }, 700);
-        }
-    </script>
+                button.innerText = "Copied";
 
-    <slot />
+                setTimeout(() => {
+                    button.innerText = copyButtonLabel;
+                }, 700);
+            }
+        </script>
 
-    <Footer email="hello@andriuslima.com"/>
+        <slot />
 
-    <!-- Cloudflare Web Analytics -->
-    <script is:inline defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "5911fe4d731149f180d96ec86904ce8b"}'></script>
-    <!-- End Cloudflare Web Analytics -->
+        <Footer email="hello@andriuslima.com"/>
+
+        <!-- Cloudflare Web Analytics -->
+        <script is:inline defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "5911fe4d731149f180d96ec86904ce8b"}'></script>
+        <!-- End Cloudflare Web Analytics -->
     </body>
 </html>

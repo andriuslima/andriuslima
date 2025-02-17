@@ -8,6 +8,18 @@ const currentYear = new Date().getFullYear();
 const mailto: string = `mailto:${email}`
 ---
 
+<style>
+    footer {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        background: black;
+        height: 100px;
+        margin: 0;
+        padding: 0;
+    }
+</style>
+
 <footer>
     <h1>Want to work together? Send a message to <a href={mailto}>{email}</a></h1>
     <h6>Designed and developed by Andrius Lima - {currentYear} &copy;</h6>
