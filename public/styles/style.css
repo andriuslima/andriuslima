@@ -17,11 +17,6 @@ h1 {
     margin-bottom: 0;
 }
 
-.card-dynamic h2 {
-    font-size: 30px;
-    font-style: italic;
-}
-
 footer h1 {
     font-size: 18px;
     color: white;
@@ -34,6 +29,11 @@ h2 {
     font-size: 30px;
     margin-top: 25px;
     margin-bottom: 0;
+}
+
+.card-dynamic h2 {
+    font-size: 30px;
+    font-style: italic;
 }
 
 h3 {
@@ -153,4 +153,51 @@ footer {
 
 .copy-code:hover {
     background: rgba(256, 256, 256, 30%);
+}
+
+@media only screen and (max-width: 600px) {
+    h1 {
+        font-size: 30px;
+    }
+
+    footer h1 {
+        font-size: 15px;
+        color: white;
+        padding-top: 5px;
+        text-align: center;
+    }
+
+    .card-dynamic h2 {
+        font-size: 20px;
+    }
+
+    h2 {
+        font-size: 20px;
+        margin-top: 20px;
+    }
+
+    header h3 {
+        font-size: 20px;
+        line-height: 20px;
+    }
+
+    h3 {
+        font-size: 25px;
+        margin-top: 5px;
+    }
+
+    h4 {
+        font-weight: 400;
+        font-size: 15px;
+        margin-top: 15px;
+        margin-bottom: 0;
+    }
+
+    header {
+        padding: 10px 15px;
+    }
+
+    .menu {
+        gap: 25px;
+    }
 }
