@@ -1,0 +1,149 @@
+---
+import { getCollection, type CollectionEntry } from "astro:content";
+import Page from "../layouts/page.astro";
+
+const posts: CollectionEntry<"posts">[] = await getCollection("posts");
+---
+
+<style>
+    h1 {
+        font-size: 40px;
+        margin: 0;
+    }
+    h2 {
+        font-size: 25px;
+        margin: 0;
+        color: #909499;
+    }
+    h3 {
+        font-size: 20px;
+        margin: 0;
+        color: #909499;
+    }
+    .main-section {
+        padding: 0.5em;
+        display: flex;
+        flex-flow: column nowrap;
+        width: 60em;
+        margin: 10em auto 5em;
+        align-items: center;
+    }
+    header {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        margin: 1em auto 2em; // top, sides, bottom
+        width: 100%;
+    }
+
+    .post {
+        display: flex;
+        flex-flow: column nowrap;
+        margin: 1em auto 1em;
+        padding: 2em;
+        border: 1px solid #909499;
+        box-shadow: 1px 1px 10px 0 #e1e1e1;
+        width: 100%;
+    }
+
+    header a {
+        text-decoration: none;
+    }
+
+    .post h1 {
+        font-size: 30px;
+    }
+
+    .post h2 {
+        font-size: 20px;
+        color: #000;
+    }
+
+    .post h3 {
+        font-size: 15px;
+    }
+
+    .post a {
+        text-decoration: none;
+    }
+</style>
+
+<Page>
+    <div class="main-section">
+        <header>
+            <h1><a href="/">Andrius Lima.</a></h1>
+            <h2>Thoughts, stories and ideas.</h2>
+        </header>
+
+        {posts.map(post => (
+            <div class="post">
+                <h1><a href={`/posts/${post.id}`} target="_blank">{post.data.title}</a></h1>
+                <h3>Published on {post.data.date.toDateString()}</h3>
+                <h2>
+                    {post.data.description}
+                </h2>
+            </div>
+        ))}
+        <div class="post">
+            <h1>Writing and managing content in Ghost, an advanced guide</h1>
+            <h3>Published on August 4th, 2025</h3>
+            <h2>A full overview of all the features built into the Ghost editor, including powerful workflow automations to speed up your creative process.…</h2>
+        </div>
+        <div class="post">
+            <h1>Writing and managing content in Ghost, an advanced guide</h1>
+            <h3>Published on August 4th, 2025</h3>
+            <h2>A full overview of all the features built into the Ghost editor, including powerful workflow automations to speed up your creative process.…</h2>
+        </div>
+        <div class="post">
+            <h1>Writing and managing content in Ghost, an advanced guide</h1>
+            <h3>Published on August 4th, 2025</h3>
+            <h2>A full overview of all the features built into the Ghost editor, including powerful workflow automations to speed up your creative process.…</h2>
+        </div>
+        <div class="post">
+            <h1>Writing and managing content in Ghost, an advanced guide</h1>
+            <h3>Published on August 4th, 2025</h3>
+            <h2>A full overview of all the features built into the Ghost editor, including powerful workflow automations to speed up your creative process.…</h2>
+        </div>
+        <div class="post">
+            <h1>Writing and managing content in Ghost, an advanced guide</h1>
+            <h3>Published on August 4th, 2025</h3>
+            <h2>A full overview of all the features built into the Ghost editor, including powerful workflow automations to speed up your creative process.…</h2>
+        </div>
+        <div class="post">
+            <h1>Writing and managing content in Ghost, an advanced guide</h1>
+            <h3>Published on August 4th, 2025</h3>
+            <h2>A full overview of all the features built into the Ghost editor, including powerful workflow automations to speed up your creative process.…</h2>
+        </div>
+        <div class="post">
+            <h1>Writing and managing content in Ghost, an advanced guide</h1>
+            <h3>Published on August 4th, 2025</h3>
+            <h2>A full overview of all the features built into the Ghost editor, including powerful workflow automations to speed up your creative process.…</h2>
+        </div>
+        <div class="post">
+            <h1>Writing and managing content in Ghost, an advanced guide</h1>
+            <h3>Published on August 4th, 2025</h3>
+            <h2>A full overview of all the features built into the Ghost editor, including powerful workflow automations to speed up your creative process.…</h2>
+        </div>
+        <div class="post">
+            <h1>Writing and managing content in Ghost, an advanced guide</h1>
+            <h3>Published on August 4th, 2025</h3>
+            <h2>A full overview of all the features built into the Ghost editor, including powerful workflow automations to speed up your creative process.…</h2>
+        </div>
+        <div class="post">
+            <h1>Writing and managing content in Ghost, an advanced guide</h1>
+            <h3>Published on August 4th, 2025</h3>
+            <h2>A full overview of all the features built into the Ghost editor, including powerful workflow automations to speed up your creative process.…</h2>
+        </div>
+        <div class="post">
+            <h1>Writing and managing content in Ghost, an advanced guide</h1>
+            <h3>Published on August 4th, 2025</h3>
+            <h2>A full overview of all the features built into the Ghost editor, including powerful workflow automations to speed up your creative process.…</h2>
+        </div>
+        <div class="post">
+            <h1>Writing and managing content in Ghost, an advanced guide</h1>
+            <h3>Published on August 4th, 2025</h3>
+            <h2>A full overview of all the features built into the Ghost editor, including powerful workflow automations to speed up your creative process.…</h2>
+        </div>
+    </div>
+</Page>
+
