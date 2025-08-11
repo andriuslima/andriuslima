@@ -1,0 +1,49 @@
+---
+import "@/styles/global.css";
+import Footer from "@/components/global/Footer.astro";
+import {AstroSeo} from "@astrolib/seo";
+---
+
+<html lang="en" class="selection:bg-base-200 selection:text-base-900">
+<head>
+    <title>Andrius Lima</title>
+    <AstroSeo
+            title="Andrius Lima Personal Website"
+            description="Andrius Lima personal webstie containing information about work and education"
+            canonical="https://www.andriuslima.com"
+            openGraph={{
+                url: "https://www.andriuslima.com",
+                title: "Andrius Lima Personal Website",
+                description: "Andrius Lima personal webstie containing information about work and education",
+                site_name: "Andrius Lima",
+                type: "website",
+                locale: "en_US",
+            }}
+    />
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="theme-color" content="#ffffff"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="robots" content="index, follow"/>
+    <meta name="googlebot" content="index, follow"/>
+    <meta name="robots" content="index, follow"/>
+    <meta name="googlebot" content="index, follow"/>
+    <link rel="preconnect" href="https://rsms.me/"/>
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css"/>
+    <!--<link rel="icon" href="/favicon.ico" sizes="any"/>-->
+    <!--<link rel="icon" href="/icon.svg" type="image/svg+xml"/>-->
+    <!--<link rel="apple-touch-icon" href="/apple-touch-icon.png"/>-->
+    <!--<link rel="manifest" href="/manifest.webmanifest"/>-->
+    <!--<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"/>-->
+    <!--<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"/>-->
+    <!--<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"/>-->
+    <!--<link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png"/>-->
+    <!--<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>-->
+</head>
+<body class="bg-white dark:bg-base-900 flex flex-col h-svh">
+<main class="grow">
+    <slot/>
+</main>
+<Footer/>
+</body>
+</html>

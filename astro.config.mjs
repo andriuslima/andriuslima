@@ -1,11 +1,12 @@
-import { defineConfig } from "astro/config";
+import {defineConfig} from 'astro/config';
+import tailwindcss from '@tailwindcss/vite';
+import sitemap from "@astrojs/sitemap";
 
 export default defineConfig({
-    site: "https://www.andriuslima.com",
-    markdown: {
-        shikiConfig: {
-            theme: 'dracula',
-            wrap: true,
-        },
+    vite: {
+        plugins: [tailwindcss()],
     },
+
+    site: 'https://andriuslima.com',
+    integrations: [sitemap()]
 });

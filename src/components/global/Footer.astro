@@ -1,0 +1,52 @@
+---
+import Text from "@/components/fundations/elements/Text.astro";
+import Wrapper from "@/components/fundations/containers/Wrapper.astro";
+const location = {
+    city: 'Washington',
+    state: 'DC',
+    country: 'US',
+    timezone: 'EST',
+}
+---
+
+<footer>
+    <Wrapper variant="standard">
+        <div
+                class="grid grid-cols-1 gap-4 md:grid-cols-3 border-b pt-8 pb-24 border-base-200 dark:border-base-800"
+        >
+            <Text tag="h3" variant="textSM" class="text-base-900 dark:text-white">
+                {location.city} - {location.state}, {location.country}
+                <span
+                        id="clock"
+                        class="block text-base-600 dark:text-base-600 dark:text-base-400 text-xs"
+                >
+        </span>
+            </Text>
+            <Text
+                    tag="p"
+                    variant="textXS"
+                    class="text-base-600 dark:text-base-600 dark:text-base-400 lg:col-span-2"
+            >Developed by Andrius Lima. <span id="year"></span></Text>
+        </div>
+    </Wrapper>
+</footer>
+
+<script type="module">
+    function updateClock() {
+        const now = new Date();
+        document.getElementById("clock").textContent = now.toLocaleTimeString("en-US", {
+            timeZone: location.timezone,
+            hour12: true,
+            hour: "2-digit",
+            minute: "2-digit",
+        });
+    }
+
+    function updateYear() {
+        document.getElementById("year").textContent = new Date().getFullYear();
+    }
+
+    updateClock();
+    updateYear();
+    setInterval(updateClock, 1000);
+</script>

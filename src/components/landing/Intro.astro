@@ -1,0 +1,65 @@
+---
+// Assets
+import {Image} from "astro:assets";
+import Avatar from "@/images/avatar.jpeg";
+import Text from "@/components/fundations/elements/Text.astro";
+import Wrapper from "@/components/fundations/containers/Wrapper.astro";
+---
+
+<section>
+    <Wrapper variant="standard">
+        <div
+                class="grid grid-cols-1 gap-4 md:grid-cols-3 border-b pb-8 pt-24 border-base-200 dark:border-base-800"
+        >
+
+            <Image
+                    src={Avatar}
+                    alt="Andrius Lima"
+                    width={400}
+                    height={400}
+                    loading="eager"
+                    decoding="async"
+                    class="rounded-2xl size-24 object-cover ovjet-center"
+            />
+            <div class="lg:col-span-2">
+                <Text
+                        tag="h1"
+                        variant="textSM"
+                        class="font-medium text-base-900 dark:text-white"
+                >Andrius Lima
+                </Text
+                >
+                <Text
+                        tag="p"
+                        variant="textXS"
+                        class="text-base-600 dark:text-base-600 dark:text-base-400"
+                >Software Engineer Manager
+                </Text
+                >
+                <Text
+                        tag="p"
+                        variant="textSM"
+                        class="text-base-600 dark:text-base-600 dark:text-base-400 mt-4"
+                >
+                    I'm s software engineer manager at <a href="https://communityarchives.com">Community Archives</a>.
+                </Text>
+                <Text
+                        tag="p"
+                        variant="textSM"
+                        class="text-base-600 dark:text-base-600 dark:text-base-400 mt-4"
+                >
+                    My goal is to create a environment where people feel good to work on. It is one of my principles that feeling good about your work - and your work environment - is the base for creating a high performant team.
+                </Text>
+                <Text
+                        tag="p"
+                        variant="textSM"
+                        class="text-base-600 dark:text-base-600 dark:text-base-400 mt-4"
+                >
+                    Creating - or changing - the team culture might take some time. That are a lot of things you need to iron out.
+                    I rely on the work of Cal Newport and Scrum methodology to create a high performant team whose team members enjoy working on.
+                </Text>
+
+            </div>
+        </div>
+    </Wrapper>
+</section>

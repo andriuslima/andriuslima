@@ -1,7 +1,16 @@
-{
-    "extends": "astro/tsconfigs/strict",
+  {
     "compilerOptions": {
-        "strictNullChecks": true,
-        "allowJs": true
+    "types": ["@astrojs/image/client"],
+      "strictNullChecks": true,
+      "target": "ESNext",
+      "module": "ESNext",
+      "moduleResolution": "node",
+      "resolveJsonModule": true,
+      "isolatedModules": true,
+      "noEmit": true,
+      "baseUrl": ".",
+      "paths": {
+        "@/*": ["src/*"]
+      }
     }
-}
+  }
