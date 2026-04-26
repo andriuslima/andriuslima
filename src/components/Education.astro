@@ -1,0 +1,57 @@
+---
+const data = [
+    {
+        period: "2016 — 2020",
+        title: "Bachelor's in Computer Science",
+        location: "Pontifícia Universidade Católica do Rio Grande do Sul, Brazil",
+        link: "https://www.pucrs.br/en",
+        description: "The program provides comprehensive training in Computer Science as it equips its students to work as system developers, researchers, software designers, technology consultants, managers in technology companies and future entrepreneurs. The program includes not only the fundamentals of Information Technology but also its major areas of operation, practical applications and technological trends that are constantly revisited.",
+    },
+];
+---
+
+<section class="border-t border-base-200 py-16">
+    <div class="max-w-[1100px] mx-auto px-8">
+        <div class="grid grid-cols-1 md:grid-cols-[220px_1fr] gap-12">
+            <div>
+                <div class="sticky top-8">
+                    <div class="text-[12px] uppercase tracking-[0.14em] font-medium text-base-500">
+                        Education
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-col gap-10">
+                {
+                    data.map((entry) => (
+                        <article class="grid grid-cols-1 sm:grid-cols-[130px_1fr] gap-2 sm:gap-8">
+                            <div>
+                                <time class="text-[13px] text-base-500 [font-variant-numeric:tabular-nums] max-sm:text-[12.5px]">
+                                    {entry.period}
+                                </time>
+                            </div>
+                            <div>
+                                <h3 class="text-[17px] font-medium text-base-900 tracking-[-0.005em] leading-[1.35]">
+                                    {entry.title}
+                                </h3>
+                                <div class="mt-0.5 text-[15px] text-base-600">
+                                    <a
+                                        href={entry.link}
+                                        target="_blank"
+                                        rel="noreferrer"
+                                        class="text-base-600 no-underline transition-colors duration-[160ms] hover:text-base-900"
+                                    >
+                                        <span class="italic">{entry.location}</span>
+                                        <span aria-hidden="true" class="text-[12px] ml-1.5">↗</span>
+                                    </a>
+                                </div>
+                                <p class="text-[14.5px] leading-[1.65] text-base-600 [text-wrap:pretty] mt-3">
+                                    {entry.description}
+                                </p>
+                            </div>
+                        </article>
+                    ))
+                }
+            </div>
+        </div>
+    </div>
+</section>

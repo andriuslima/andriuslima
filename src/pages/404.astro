@@ -1,50 +1,33 @@
 ---
-// Fundation
 import BaseLayout from "@/layouts/BaseLayout.astro";
-import Text from "@/components/fundations/elements/Text.astro";
-import Button from "@/components/fundations/elements/Button.astro";
-import Wrapper from "@/components/fundations/containers/Wrapper.astro";
 ---
 
 <BaseLayout>
   <section>
-    <Wrapper variant="standard">
+    <div class="max-w-5xl mx-auto px-8">
       <div
-        class="grid grid-cols-1 gap-4 md:grid-cols-3 border-b py-8 py-24 border-base-200 dark:border-base-800"
+        class="grid grid-cols-1 gap-4 md:grid-cols-3 border-b py-8 py-24 border-base-200"
       >
         <div>
-          <Text
-            tag="h1"
-            variant="textSM"
-            class="font-medium text-base-900 dark:text-white"
-          >
-            404 — Not Found</Text
-          >
-          <Text
-            tag="p"
-            variant="textXS"
-            class="text-base-600 dark:text-base-600 dark:text-base-400"
-          >
-            You wandered too far.
-          </Text>
+          <h1 class="text-sm font-medium text-base-900">404 — Not Found</h1>
+          <p class="text-xs text-base-600">You wandered too far.</p>
         </div>
         <div class="lg:col-span-2 flex flex-col">
-          <Text
-            tag="p"
-            variant="textSM"
-            class="text-base-600 dark:text-base-600 dark:text-base-400"
-          >
-            This page doesn’t exist, never did, or was removed while debugging
-            something else. Try going back or check if you typo’d your way into
-            oblivion. If you’re lost, you’re not alone.
-          </Text>
+          <p class="text-sm text-base-600">
+            This page doesn't exist, never did, or was removed while debugging
+            something else. Try going back or check if you typo'd your way into
+            oblivion. If you're lost, you're not alone.
+          </p>
           <div class="flex mt-2">
-            <Button isLink={true} href="/" size="xs" variant="muted">
+            <a
+              href="/"
+              class="flex items-center font-medium justify-center transition-all rounded-lg duration-300 focus:ring-2 focus:ring-none focus:ring-offset-1 focus:ring-offset-white text-base-900 bg-base-100 hover:bg-base-200 focus:ring-base-100 h-8 px-6 py-3 text-xs"
+            >
               Go back home
-            </Button>
+            </a>
           </div>
         </div>
       </div>
-    </Wrapper>
+    </div>
   </section>
 </BaseLayout>

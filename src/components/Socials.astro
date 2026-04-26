@@ -1,0 +1,64 @@
+---
+const links = [
+    {
+        platform: "GitHub",
+        url: "https://github.com/andriuslima",
+        handle: "@andriuslima",
+        rel: "noreferrer",
+    },
+    {
+        platform: "LinkedIn",
+        url: "https://www.linkedin.com/in/andrius-lima/",
+        handle: "andrius-lima",
+        rel: "noreferrer",
+    },
+    {
+        platform: "Email",
+        url: "mailto:hello@andriuslima.com",
+        handle: "hello@andriuslima.com",
+        rel: undefined,
+    },
+    {
+        platform: "Mastodon",
+        url: "https://mastodon.social/@andriuslima",
+        handle: "@andriuslima@mastodon.social",
+        rel: "me noreferrer",
+    },
+];
+---
+
+<section class="border-t border-base-200 py-16">
+    <div class="max-w-[1100px] mx-auto px-8">
+        <div class="grid grid-cols-1 md:grid-cols-[220px_1fr] gap-12">
+            <div>
+                <div class="sticky top-8">
+                    <div class="text-[12px] uppercase tracking-[0.14em] font-medium text-base-500">
+                        Elsewhere
+                    </div>
+                </div>
+            </div>
+            <div>
+                <p class="text-[15.5px] leading-[1.7] text-base-600 max-w-[520px] [text-wrap:pretty]">
+                    The best way to reach me is by email. I also keep a low-frequency presence on the platforms below.
+                </p>
+                <ul class="list-none p-0 mt-8 border-t border-base-100">
+                    {
+                        links.map((social) => (
+                            <li class="border-b border-base-100">
+                                <a
+                                    href={social.url}
+                                    rel={social.rel}
+                                    class="group grid grid-cols-[140px_1fr_24px] max-[520px]:grid-cols-[1fr_24px] items-center py-[18px] gap-4 no-underline text-base-900 transition-[padding] duration-200 ease-in-out hover:pl-2"
+                                >
+                                    <span class="text-[16px] font-medium">{social.platform}</span>
+                                    <span class="text-[13.5px] text-base-500 [font-variant-numeric:tabular-nums] max-[520px]:hidden">{social.handle}</span>
+                                    <span aria-hidden="true" class="text-base-500 transition-transform duration-200 ease-in-out group-hover:translate-x-0.5 group-hover:-translate-y-0.5">↗</span>
+                                </a>
+                            </li>
+                        ))
+                    }
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>

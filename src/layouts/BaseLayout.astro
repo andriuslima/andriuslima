@@ -1,10 +1,13 @@
 ---
 import "@/styles/global.css";
-import Footer from "@/components/global/Footer.astro";
+import '@fontsource/playfair-display/400.css';
+import '@fontsource/playfair-display/500.css';
+import '@fontsource/playfair-display/400-italic.css';
+import Footer from "@/components/Footer.astro";
 import {AstroSeo} from "@astrolib/seo";
 ---
 
-<html lang="en" class="selection:bg-base-200 selection:text-base-900">
+<html lang="en" class="selection:bg-[oklch(0.85_0.04_268.34)] selection:text-black">
 <head>
     <title>Andrius Lima</title>
     <AstroSeo
@@ -28,8 +31,7 @@ import {AstroSeo} from "@astrolib/seo";
     <meta name="googlebot" content="index, follow"/>
     <meta name="robots" content="index, follow"/>
     <meta name="googlebot" content="index, follow"/>
-    <link rel="preconnect" href="https://rsms.me/"/>
-    <link rel="stylesheet" href="https://rsms.me/inter/inter.css"/>
+
     <!--<link rel="icon" href="/favicon.ico" sizes="any"/>-->
     <!--<link rel="icon" href="/icon.svg" type="image/svg+xml"/>-->
     <!--<link rel="apple-touch-icon" href="/apple-touch-icon.png"/>-->
@@ -40,7 +42,7 @@ import {AstroSeo} from "@astrolib/seo";
     <!--<link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png"/>-->
     <!--<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>-->
 </head>
-<body class="bg-white dark:bg-base-900 flex flex-col h-svh">
+<body class="bg-white flex flex-col h-svh">
 <main class="grow">
     <slot/>
 </main>

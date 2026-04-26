@@ -1,0 +1,38 @@
+---
+// Assets
+import { Image } from "astro:assets";
+import Avatar from "@/images/avatar.jpeg";
+---
+
+<section class="pt-24 pb-16">
+    <div class="max-w-[1100px] mx-auto px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-[360px_1fr] gap-16 items-start">
+            <Image
+                src={Avatar}
+                alt="Andrius Lima"
+                width={720}
+                height={720}
+                loading="eager"
+                decoding="async"
+                class="rounded-[18px] w-[360px] aspect-square object-cover saturate-[1.02] bg-base-100 shadow-[0_1px_2px_rgba(0,0,0,0.04),0_24px_48px_-24px_rgba(0,0,0,0.18)]"
+            />
+            <div>
+                <h1 class="font-display text-[clamp(48px,7vw,88px)] leading-[1.02] tracking-[-0.015em] font-medium text-base-900">
+                    Andrius<br /><span class="italic font-normal">Lima.</span>
+                </h1>
+                <p class="text-[17px] text-base-600 mt-5">Software Engineering Manager</p>
+                <div class="flex flex-col gap-3.5 max-w-[560px] mt-7">
+                    <p class="text-[15.5px] leading-[1.7] text-base-600 [text-wrap:pretty]">
+                        I'm a software engineering manager at <a href="https://communityarchives.com" target="_blank" rel="noreferrer" class="text-base-900 no-underline border-b border-base-200 pb-px">Community Archives</a>.
+                    </p>
+                    <p class="text-[15.5px] leading-[1.7] text-base-600 [text-wrap:pretty]">
+                        My goal is to create an environment where people feel good to work in. It is one of my principles that feeling good about your work — and your work environment — is the base for creating a high-performing team.
+                    </p>
+                    <p class="text-[15.5px] leading-[1.7] text-base-600 [text-wrap:pretty]">
+                        Building or changing team culture takes time; there are a lot of things to iron out. I lean on the work of Cal Newport and Scrum methodology to create high-performing teams whose members enjoy the work itself.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
