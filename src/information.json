@@ -1,0 +1,66 @@
+{
+    "work": [
+        {
+            "period": "2022 — Present",
+            "title": "Software Engineering Manager",
+            "company": "HOAM Ventures",
+            "link": "https://www.hoamventures.com",
+            "description": "Leading a team of software developers delivering solutions for Community Archives. Oversee the full development lifecycle — planning, requirements, build, test, deploy — and partner closely with product and design. Equally focused on people: mentoring, coaching, and protecting a collaborative environment where everyone can do their best work."
+        },
+        {
+            "period": "2019 — 2022",
+            "title": "Software Backend Engineer",
+            "company": "HOAM Ventures",
+            "link": "#",
+            "description": "Designed and maintained scalable microservices in Java and Node.js (TypeScript) at TownSq. Worked across MongoDB, AWS, and third-party integrations — owning data integrity, auth, and deployment of cloud-native services in tight collaboration with frontend, product, and stakeholders."
+        },
+        {
+            "period": "2019",
+            "title": "Software Backend Engineer",
+            "company": "Neogrid",
+            "link": "https://www.neogrid.com",
+            "description": "Java backend developer on Neogrid's core software architecture, building Java EE applications deployed on Oracle WebLogic."
+        },
+        {
+            "period": "2016 — 2018",
+            "title": "Infrastructure Analyst, Intern",
+            "company": "Neogrid",
+            "link": "https://www.neogrid.com",
+            "description": "Helped maintain and modernize the infrastructure architecture, managing a VMware cluster that provisioned virtual machines for development teams."
+        }
+    ],
+    "education": [
+        {
+            "period": "2016 — 2020",
+            "title": "Bachelor's in Computer Science",
+            "location": "Pontifícia Universidade Católica do Rio Grande do Sul, Brazil",
+            "link": "https://www.pucrs.br/en",
+            "description": "The program provides comprehensive training in Computer Science as it equips its students to work as system developers, researchers, software designers, technology consultants, managers in technology companies and future entrepreneurs. The program includes not only the fundamentals of Information Technology but also its major areas of operation, practical applications and technological trends that are constantly revisited."
+        }
+    ],
+    "social": [
+        {
+            "platform": "GitHub",
+            "url": "https://github.com/andriuslima",
+            "handle": "@andriuslima",
+            "rel": "noreferrer"
+        },
+        {
+            "platform": "LinkedIn",
+            "url": "https://www.linkedin.com/in/andrius-lima/",
+            "handle": "andrius-lima",
+            "rel": "noreferrer"
+        },
+        {
+            "platform": "Email",
+            "url": "mailto:hello@andriuslima.com",
+            "handle": "hello@andriuslima.com"
+        },
+        {
+            "platform": "Mastodon",
+            "url": "https://mastodon.social/@andriuslima",
+            "handle": "@andriuslima@mastodon.social",
+            "rel": "me noreferrer"
+        }
+    ]
+}

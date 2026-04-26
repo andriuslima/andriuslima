@@ -1,30 +1,6 @@
 ---
-const links = [
-    {
-        platform: "GitHub",
-        url: "https://github.com/andriuslima",
-        handle: "@andriuslima",
-        rel: "noreferrer",
-    },
-    {
-        platform: "LinkedIn",
-        url: "https://www.linkedin.com/in/andrius-lima/",
-        handle: "andrius-lima",
-        rel: "noreferrer",
-    },
-    {
-        platform: "Email",
-        url: "mailto:hello@andriuslima.com",
-        handle: "hello@andriuslima.com",
-        rel: undefined,
-    },
-    {
-        platform: "Mastodon",
-        url: "https://mastodon.social/@andriuslima",
-        handle: "@andriuslima@mastodon.social",
-        rel: "me noreferrer",
-    },
-];
+import information from "@/information.json";
+const socials = information.social;
 ---
 
 <section class="border-t border-base-200 py-16">
@@ -43,7 +19,7 @@ const links = [
                 </p>
                 <ul class="list-none p-0 mt-8 border-t border-base-100">
                     {
-                        links.map((social) => (
+                        socials.map((social) => (
                             <li class="border-b border-base-100">
                                 <a
                                     href={social.url}
